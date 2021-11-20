@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* GLOBALES */
+
+.fondo{
+	background-color: #F0E7E7;
+}
+
+.bg-footer-header{
+	background-color: #292B2C;
+}
+
+.formato-lista{
+	text-decoration: none;
+	list-style: none;
+}
+
+.text-black-light{
+	background: rgba(246, 249, 100, 0.65);
+}
+
+.bg-img{
+	background-image: linear-gradient(rgba(29, 130, 232, 0.85), rgba(29, 82, 232, 0.50)), url("../img/modelismofondobarco.jpg");
+    background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+  	background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/* CAROUSEL */
+
+.fondo-carousel{
+	background-image: url("../img/fondo_carousel01.jpg");
+	background-position: center;
+}
+
+.fondo-carousel02{
+	background-image: url("../img/fondo_carousel02.jpg");
+	background-position: center;
+}
+
+.fondo-carousel03{
+	background-image: url("../img/fondo_carousel03.jpg");
+	background-position: center;
+}
+
+
+.format-img-carousel{
+	max-height: 20rem ;
+	max-width: 30rem ;
+}
+
+
+/* CARDS */
+
+.format-img-card{
+	max-height: 15rem ;
+	max-width: 12rem ;
+}
+
+.bg-fondo-card{
+	background-image: url("../img/textura03.jpg");
+}
+
+/* SECCIONES DE COLECCION */
+
+.fondo-sec{
+	background-image: url("../img/textura03.jpg");
+	background-position: center;
+}
+
+.transparency{
+	background: rgba(246, 249, 249, 0.65);
+}
+
+
