@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head xmlns:th="http://www.thymeleaf.org">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+	<title>Planeta Hobby - Sistema de Administración</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.6.1/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/stylesadmin.css}">
+	<link rel="stylesheet" th:href="@{/webjars/fortawesome__fontawesome-free/5.15.3/css/all.css}">
+	
+</head>
+<body>
+
+	<!-- HEADER -->
+	<div id="content-wrapper" class="d-flex">
+		<header th:insert="layout/adminsidebar :: headeradmin"></header> 
+	
+		<div id="page-container" class="w-100 bg-light-blue">
+			
+			<!-- NAVBAR -->
+			<nav th:insert="layout/adminsidebar :: navbaradmin"></nav>
+			
+			<!-- CONTENIDO PRINCIPAL -->
+			<div id="content" class="container-fluidm mx-4 my-3">
+				<section class="bg-white mx-4">
+					<div class="mx-4 border-bottom">
+						<div class="row  my-4">
+							<div class="col-xl-6 col-lg-6 pt-3">
+								<h2 class="font-weight-bold mb-0 text-uppercase"><i class="far fa-building fa-lg"></i>&nbsp;Lista de Oficinas</h2>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="mx-5 row  bg-white justify-content-center">
+			
+				<!-- FORMULARIO DE BUSQUEDA -->
+				<div class="col-md-12 d-flex bd-highlight">
+					<div class="mr-auto p-2 bd-highlight">
+						<form class="form-inline my-4 mx-4">
+						  <div class="form-group mb-2">
+						  	<label for="search" class="col-sm-2 col-form-label">Buscar:</label>
+						  </div>
+						  <div class="form-group mx-sm-3 mb-2">
+						    <input type="text" class="form-control" id="search2">
+						  </div>
+						  <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-search"></i></button>
+						</form>
+					</div>
+					<div class="col-md-3 p-2 bd-highlight my-auto bd-highlight">
+						<a  th:insert="layout/botones :: botonNuevo"></a>
+					</div>
+				</div>
+				
+				<!-- CONTENIDO DE LA TABLA -->
+				<table class="table text-center mx-4">
+				  <thead class="m-3">
+				    <tr>
+				      <th scope="col">C&oacute;digo</th>
+				      <th scope="col">Ciudad</th>
+				      <th scope="col">Tel&eacute;fono</th>
+				      <th scope="col">Direcci&oacute;n</th>
+				      <th scope="col">Estado</th>
+				      <th scope="col">Pa&iacute;s</th>
+				      <th scope="col">C&oacute;digo Postal</th>
+				      <th scope="col">Territorio</th>
+				      <th scope="col">Acci&oacute;n</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>Mark</td>
+				      <td>Otto</td>
+				      <td>Mark</td>
+				      <td>Otto</td>
+				      <td>Mark</td>
+				      <td>Mark</td>
+				      <td>Mark</td>
+				      <td class="d-inline-flex">
+				      	<section th:insert="layout/botones :: botonEditar"></section>
+				      	<section th:insert="layout/botones :: botonEliminar"></section>
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Jacob</td>
+				      <td>Thornton</td>
+				      <td>@fat</td>
+				      <td>Otto</td>
+				      <td>Mark</td>
+				      <td>Mark</td>
+				      <td>Mark</td>
+				      <td class="d-inline-flex">
+				      	<section th:insert="layout/botones :: botonEditar"></section>
+				      	<section th:insert="layout/botones :: botonEliminar"></section>
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Larry</td>
+				      <td>the Bird</td>
+				      <td>@twitter</td>
+				      <td>Otto</td>
+				      <td>Mark</td>
+				      <td>Mark</td>
+				      <td>Mark</td>
+				      <td class="d-inline-flex">
+				      	<section th:insert="layout/botones :: botonEditar"></section>
+				      	<section th:insert="layout/botones :: botonEliminar"></section>
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
+				
+				<nav aria-label="Page navigation example">
+				  <ul class="pagination justify-content-center">
+				    <li class="page-item disabled">
+				      <a class="page-link">Previous</a>
+				    </li>
+				    <li class="page-item"><a class="page-link" href="#">1</a></li>
+				    <li class="page-item"><a class="page-link" href="#">2</a></li>
+				    <li class="page-item"><a class="page-link" href="#">3</a></li>
+				    <li class="page-item">
+				      <a class="page-link" href="#">Next</a>
+				    </li>
+				  </ul>
+				</nav>
+				
+						
+				<!-- MODAL - FORMULARIO DE DATOS DE LAS OFICINAS -->
+				<div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="formularioModal" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header mx-4 text-uppercase">
+				        <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-building"></i> Registro de Oficina</h5>			        
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				      	<div class="m-4">
+				      	
+				      	<!-- CAMPOS DEL FORMULARIO -->
+							<form>
+							  <div class="form-group">
+							    <label for="codigoOficina">C&oacute;digo:</label>
+							    <input type="text" class="form-control" id="codigoOficina" aria-describedby="Ingresar codigo de oficina">
+							  </div>
+							  <div class="form-group">
+							    <label for="ciudad">Ciudad:</label>
+							    <input type="text" class="form-control" id="ciudad" aria-describedby="Ingresar ciudad">
+							  </div>
+							  <div class="form-group">
+							    <label for="telefono">Tel&eacute;fono:</label>
+							    <input type="text" class="form-control" id="telefono" aria-describedby="Ingresar telefono">
+							  </div>
+							  <div class="form-group">
+							    <label for="lineaDireccion1">Direcci&oacute;n 1:</label>
+							    <input type="text" class="form-control" id="lineaDireccion1" aria-describedby="Ingresar direccion1">
+							  </div>
+							  <div class="form-group">
+							    <label for="lineaDireccion2">Direcci&oacute;n 2:</label>
+							    <input type="text" class="form-control" id="lineaDireccion2" aria-describedby="Ingresar direccion2">
+							  </div>
+							  <div class="form-group">
+							    <label for="estado">Estado:</label>
+							    <input type="text" class="form-control" id="estado" aria-describedby="Ingresar estado">
+							  </div>
+							  <div class="form-group">
+							    <label for="pais">Pa&iacute;s:</label>
+							    <input type="text" class="form-control" id="pais" aria-describedby="Ingresar pais">
+							  </div>
+							  <div class="form-group">
+							    <label for="codigoPostal">C&oacute;digo postal:</label>
+							    <input type="text" class="form-control" id="codigoPostal" aria-describedby="Ingresar codigoPostal">
+							  </div>
+							  <div class="form-group">
+							    <label for="territorio">Territorio:</label>
+							    <input type="text" class="form-control" id="territorio" aria-describedby="Ingresar territorio">
+							  </div>
+							</form>
+						</div>
+				      </div>
+				      <div class="modal-footer d-flex justify-content-center mx-4">
+				      	<section th:insert="layout/botones :: botonCancelar"></section>
+				      	<section th:insert="layout/botones :: botonGuardar"></section> 
+				      </div>
+				    </div>
+				  </div>
+				</div>				
+				
+				<!-- MODAL ELIMINAR OFICINA -->
+				
+				<div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header mx-4 text-uppercase">
+				        <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-backspace"></i>&nbsp;Eliminar Registro</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body text-center">
+				      	  <i class="far fa-trash-alt fa-6x my-4"></i>
+					      <div class="mx-4">
+					        <span>¿Estas seguro de eliminar el siguiente registro?</span> 
+					        <p>Codigo de oficina: <span>123</span></p> 
+					      </div>
+				      </div>
+				      <div class="modal-footer mx-4 d-flex justify-content-center">
+				      	<section th:insert="layout/botones :: botonNo"></section>
+				      	<section th:insert="layout/botones :: botonSi"></section>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+			</div>
+		 </div>
+	</div> 
+	
+	<!-- SCRIPTS -->
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/dist/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.1/js/bootstrap.bundle.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.1/js/bootstrap.min.js}"></script>
+	
+	<!-- MENU TOGGLE SCRIPT -->
+	<script type="text/javascript" src="" th:src="@{/js/dashboard.js}"></script>
+	
+
+</body>
+</html>

@@ -1,41 +1,159 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 	<body>
-		<header id="header row" th:fragment="header">
-		   <nav class="navbar navbar-expand-lg navbar-dark bg-footer-header text-uppercase">
-			  <a class="navbar-brand text-white" href="#">
-				<img th:src="@{/img/planeta.png}" width="30" height="30" class="d-inline-block align-top" alt="logo">
-				    Planeta Hobby
-			  </a>
-			  
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-			  
-			    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-			      <li class="nav-item active">
-			        <a class="nav-link text-decoration-none" href="#">Inicio<span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link text-decoration-none" href="#">Nuevos Productos</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link text-decoration-none">Oferta</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link text-decoration-none">Categorias</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link text-decoration-none">Empresa</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link text-decoration-none">Contacto</a>
-			      </li>
-			    </ul>
-				<a class="btn btn-light" href="#" role="button">Ingresar&nbsp;<i class="fas fa-sign-in-alt"></i></a>
-			  </div>		        
-			</nav>
+		<header id="header row bg-dark" th:fragment="header">
+		
+	    <!-- Start Top Nav -->
+	    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+	        <div class="container text-light">
+	            <div class="w-100 d-flex justify-content-between">
+	                <div>
+	                    <i class="fa fa-envelope mx-2"></i>
+	                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@planetahobby.com.ar</a>
+	                    <i class="fa fa-phone mx-2"></i>
+	                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:(388) 425 - 1232">(388) 425 - 1232</a>
+	                </div>
+	                <div>
+	                    <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+	                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+	                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+	                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+	                    <a class="text-light ml-3" th:href="@{/login}" target="_self">|<strong class="ml-3 mr-1">Ingresar</strong><i class="fas fa-sign-in-alt"></i></a>
+	                </div>
+	            </div>
+	        </div>
+	    </nav>
+	    <!-- Close Top Nav -->
+
+
+	    <!-- Header -->
+	    <nav class="navbar navbar-expand-lg navbar- shadow bg-white">
+	        <div class="container d-flex justify-content-between align-items-center">
+	
+	            <a class="navbar-brand text-success logo h2 align-self-center" href="index.html">
+	                Planeta Hobby
+	            </a>
+	
+	            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	                <span class="navbar-toggler-icon"></span>
+	            </button>
+	
+	            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+	                <div class="flex-fill">
+	                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+	                        <li class="nav-item">
+	                            <a class="nav-link" href="index.html">Inicio</a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link" href="about.html">Categoria</a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link" href="about.html">Oferta</a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link" href="shop.html">Empresa</a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link" href="contact.html">Contacto</a>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <div class="navbar align-self-center d-flex">
+	                    <div class="d-lg-none flex-sm-fill col-7 col-sm-auto pr-3">
+	                        <div class="input-group">
+	                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+	                            <div class="input-group-text">
+	                                <i class="fa fa-fw fa-search"></i>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+	                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+	                    </a>
+	                    <a class="nav-icon position-relative text-decoration-none" href="#">
+	                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+	                    </a>
+	                    <a class="nav-icon position-relative text-decoration-none" href="#">
+	                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+	                    </a>
+	                </div>
+	            </div>
+	
+	        </div>
+	    </nav>		
+		<!-- Close Header -->
+
+	    <!-- Modal
+	    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog modal-lg" role="document">
+	            <div class="w-100 pt-1 mb-4 text-right">
+	                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	            </div>
+	            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+	                <div class="input-group mb-2">
+	                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+	                    <button type="submit" class="input-group-text bg-success text-light">
+	                        <i class="fa fa-fw fa-search text-white"></i>
+	                    </button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>  verificar que parte es...-->
+	    
+	    
+		
+	<!-- 	   <div class="bg-light mb-0 p-2 d-flex justify-content-end row px-5">
+			  <div class="input-group col-md-3">
+				  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+				  <div class="input-group-append">
+				    <button class="btn btn-outline-secondary " type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+				  </div>
+			  </div>
+		      <a>
+		        <i class="fas fa-sign-in-alt "></i>&nbsp;Ingresar
+		      </a>
+		   </div>
+		   
+		   <nav class="navbar navbar-expand-lg navbar-dark bg-footer-header text-uppercase ">
+		   	  <div class="container">
+				  <a class="navbar-brand text-white" href="#">
+					<img th:src="@{/img/planeta.png}" width="30" height="30" class="d-inline-block align-top" alt="logo">
+					    Planeta Hobby
+				  </a>
+	
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  
+				  <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
+				  
+				    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+				      <li class="nav-item active">
+				        <a class="nav-link text-decoration-none" href="#">Inicio<span class="sr-only">(current)</span></a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link text-decoration-none" href="#">Nuevos Productos</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link text-decoration-none">Oferta</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link text-decoration-none">Categorias</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link text-decoration-none">Empresa</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link text-decoration-none">Contacto</a>
+				      </li>
+				    </ul>
+				
+			 	<a class="btn btn-light" th:href="@{/login}" role="button">Ingresar&nbsp;<i class="fas fa-sign-in-alt"></i></a> 
+				  </div>		   	 
+			  </div>
+			</nav>		    -->
 
 		</header>
 	</body>

@@ -3,18 +3,238 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
-		<title>Pagina principal - Tienda Web</title>
+		<title>Planeta Hobby - Página principal</title>
 		<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
 		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.6.1/css/bootstrap.min.css}">
+    	<link rel="stylesheet" type="text/css" th:href="@{/css/templatemo.css}">
+    	<link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}">
 		<link rel="stylesheet" th:href="@{/webjars/fortawesome__fontawesome-free/5.15.3/css/all.css}">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
 	</head>
 	<body class="fondo">
 	
 		<!-- HEADER -->
-		<header class="fixed-top" th:insert="layout/header :: header"></header> 
-			<br> <br>
-			
-		<!-- CAROUSEL -->
+		<header th:insert="layout/header :: header"></header> 
+		
+		
+	    <!-- Start Banner Hero -->
+	    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-ride="carousel">
+	        <ol class="carousel-indicators">
+	            <li data-target="#template-mo-zay-hero-carousel" data-slide-to="0" class="active"></li>
+	            <li data-target="#template-mo-zay-hero-carousel" data-slide-to="1"></li>
+	            <li data-target="#template-mo-zay-hero-carousel" data-slide-to="2"></li>
+	        </ol>
+	        <div class="carousel-inner">
+	        	
+	            <div class="carousel-item active fondo-carousel">
+	                <div class="container">
+	                    <div class="row pt-4">
+	                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+	                            <img class="img-fluid" th:src="@{/img/im01.png}" alt="">
+	                        </div>
+	                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+	                            <div class="text-align-left align-self-center">
+	                            	<img alt="" th:src="@{/img/cartel_carousel01.png}">
+	                                <!--  <h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>-->
+	                                <h3 class="h2">Helicópteros de combate</h3>
+	                                <p>
+	                                   Los helicópteros de combate más espectaculares de la historia militar
+	                                </p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="carousel-item fondo-carousel02">
+	                <div class="container">
+	                    <div class="row pt-4">
+	                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+	                            <img class="img-fluid" th:src="@{/img/im02.png}" alt="">
+	                        </div>
+	                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+	                            <div class="text-align-left">
+	                               <!--   <h1 class="h1">Proident occaecat</h1>-->
+	                                <img alt="" th:src="@{/img/cartel_carousel02.png}">
+	                                <h3 class="h2">Super Campeones</h3>
+	                                <p>
+										Colecciona las figuras de la serie y descubre todos sus secretos
+	                                </p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="carousel-item fondo-carousel03">
+	                <div class="container">
+	                	<br>
+	                    <div class="row pt-4">
+	                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+	                            <img class="img-fluid" th:src="@{/img/im03.png}" alt="">
+	                        </div>
+	                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+	                            <div class="text-align-left">
+	                               <!--   <h1 class="h1">Repr in voluptate</h1>-->
+	                                <img alt="" th:src="@{/img/cartel_carousel03.png}">
+	                                <h3 class="h2">Turismo Carretera 2020</h3>
+	                                <p>
+	                                	Colecciona los autos de la máxima categoría argentina
+	                                </p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        
+	        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-slide="prev">
+	            <i class="fas fa-chevron-left"></i>
+	        </a>
+	        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-slide="next">
+	            <i class="fas fa-chevron-right"></i>
+	        </a>
+	    <!--     
+	       <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+		     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		     <span class="sr-only">Previous</span>
+		   </button>
+		   <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+		     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		     <span class="sr-only">Next</span>
+		   </button> -->
+	    </div>
+    <!-- End Banner Hero -->
+
+
+   <!-- Start Categories of The Month -->
+    <section class="container py-5 text-capitalize">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Tu colecci&oacute;n</h1>
+                <p>
+                   En esta secci&oacute;n encontraras las categor&iacute;as destacadas del mes.
+                </p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img th:src="@{/img/sec01.png}" class="rounded-pill img-fluid border"></a>
+                <h5 class="text-center mt-3 mb-3">Modelismo y Maquetas</h5>
+                <p class="text-center"><a class="btn btn-success">Ver</a></p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img th:src="@{/img/sec02.png}" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Miniaturas</h2>
+                <p class="text-center"><a class="btn btn-success">Ver</a></p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img th:src="@{/img/sec03.png}" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Culturales</h2>
+                <p class="text-center"><a class="btn btn-success">Ver</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- End Categories of The Month -->
+
+
+    <!-- Start Featured Product -->
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1">Productos</h1>
+                    <p>
+                        Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a class="fondo-prod" href="shop-single.html">
+                            <img th:src="@{/img/mod01.png}" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$240.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                            </p>
+                            <p class="text-muted">Reviews (24)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a class="fondo-prod" href="shop-single.html">
+                            <img th:src="@{/img/mod02.png}" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$480.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
+                            <p class="card-text">
+                                Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
+                            </p>
+                            <p class="text-muted">Reviews (48)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a class="fondo-prod" href="shop-single.html">
+                            <img th:src="@{/img/mod05.png}" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$360.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
+                            <p class="card-text">
+                                Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
+                            </p>
+                            <p class="text-muted">Reviews (74)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Featured Product -->
+
+
+
+
+
+
+
+
+		<!--	<br> <br>			
+		 CAROUSEL 
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -77,21 +297,23 @@
 		     <span class="sr-only">Next</span>
 		   </button>
 		 </div>
-	<!-- 		<div class="jumbotron jumbotron-fluid bg-img text-white">
+		 
+		 
+		<div class="jumbotron jumbotron-fluid bg-img text-white">
 				<div class="container">
 					<h1 class="display-4">Modelismo y maquetas</h1>
 				    <p class="lead">
 				    	&iquest;Te gusta armar maquetas a escala? F&iacute;jate en nuestra selecci&oacute;n de coleccionables de maquetas y modelismo. Arma paso a paso coches, buques, aviones, casas o locomotoras, &iexcl;todo lo que puedas imaginar!
 				    </p>
 				</div>
-			</div>  -->
+			</div>  
 		 <br>
 		 
 		 <div class="text-center text-uppercase my-4">
 		 	<h3>Nuestras colecciones m&aacute;s recientes</h3>
 		 </div>
 		 
-		 <!-- CARDS -->
+		  CARDS 
 		 <div class="container">
 		 
 			 <div class="row card-deck">
@@ -241,7 +463,8 @@
 			 		<p>Nosotros nos encargamos de enviarte tu compra</p>
 			 	</div>
 			 </div>
-		 </div>
+		 </div>-->
+		 
 		 
 		 <!-- FOOTER -->
 		 <footer class="" th:insert="layout/footer :: footer"></footer>

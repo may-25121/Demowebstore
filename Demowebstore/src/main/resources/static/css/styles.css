@@ -1,9 +1,64 @@
 @charset "UTF-8";
 
-/* GLOBALES */
+
+/* CAROUSEL */
+
+.fondo-carousel{
+	background-image: url("../img/fondo_carousel01.jpg");
+	background-position: center;
+}
+
+.fondo-carousel02{
+	background-image: url("../img/fondo_carousel02.jpg");
+	background-position: center;
+}
+
+.fondo-carousel03{
+	background-image: url("../img/fondo_carousel03.jpg");
+	background-position: center;
+}
+
+.fondo-prod{
+	background-image: url("../img/textura03.jpg");
+	background-position: center;
+}
+
+.image-dim{
+  max-width: 4rem;
+  max-height: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GLOBALES 
 
 .fondo{
 	background-color: #F0E7E7;
+}
+
+.fondo2{
+	background-image: url("../img/textura03.jpg");
+    background-position: center; /* Center the image 
+  	background-repeat: no-repeat; /* Do not repeat the image 
 }
 
 .bg-footer-header{
@@ -21,12 +76,12 @@
 
 .bg-img{
 	background-image: linear-gradient(rgba(29, 130, 232, 0.85), rgba(29, 82, 232, 0.50)), url("../img/modelismofondobarco.jpg");
-    background-position: center; /* Center the image */
-  	background-repeat: no-repeat; /* Do not repeat the image */
-  	background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the image 
+  	background-repeat: no-repeat; /* Do not repeat the image
+  	background-size: cover; /* Resize the background image to cover the entire container 
 }
 
-/* CAROUSEL */
+/* CAROUSEL 
 
 .fondo-carousel{
 	background-image: url("../img/fondo_carousel01.jpg");
@@ -50,7 +105,7 @@
 }
 
 
-/* CARDS */
+/* CARDS 
 
 .format-img-card{
 	max-height: 15rem ;
@@ -61,7 +116,7 @@
 	background-image: url("../img/textura03.jpg");
 }
 
-/* SECCIONES DE COLECCION */
+/* SECCIONES DE COLECCION 
 
 .fondo-sec{
 	background-image: url("../img/textura03.jpg");
@@ -69,7 +124,9 @@
 }
 
 .transparency{
-	background: rgba(246, 249, 249, 0.65);
+	background: rgba(33, 37, 41, 0.11);
+	
 }
 
+ LOGIN */
 
