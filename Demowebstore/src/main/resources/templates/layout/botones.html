@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<body>
+	
+	<!-- BOTON GUARDAR -->
+	<Section th:fragment="botonGuardar">
+		<button type="button" class="btn btn-primary mx-2"><i class="far fa-save"></i>&nbsp;Guardar</button>
+	</Section>
+	
+	<!-- BOTON CANCELAR -->
+	<Section th:fragment="botonCancelar">
+		<button type="button" class="btn btn-secondary mx-2" data-dismiss="modal"><i class="fas fa-ban"></i>&nbsp;Cancelar</button>
+	</Section>
+	
+	<!-- BOTON SI -->
+	<Section th:fragment="botonSi">
+		<button type="button" class="btn btn-primary mx-2"><i class="fas fa-check"></i>&nbsp;Si</button>
+	</Section>
+	
+	<!-- BOTON NO -->
+	<Section th:fragment="botonNo">
+		<button type="button" class="btn btn-secondary mx-2"  data-dismiss="modal"><i class="fas fa-times"></i>&nbsp;No</button>
+	</Section>
+	
+	<!-- BOTON EDITAR -->
+	<section th:fragment="botonEditar" class="mx-2">
+		<a class="btn btn-warning" data-toggle="modal" data-target="#formularioModal"><i class="fas fa-edit"></i></a>
+	</section>
+	
+	
+	<!-- BOTON ELIMINAR -->
+	<section th:fragment="botonEliminar" class="mx-2">
+		<a class="btn btn-danger" data-toggle="modal" data-target="#eliminarModal"><i class="far fa-trash-alt"></i></a>
+	</section>
+	
+	
+	<!-- BOTON NUEVO REGISTRO -->
+	<section th:fragment="botonNuevo" class="d-flex justify-content-end"> 
+		<a class="btn btn-success" data-toggle="modal" data-target="#formularioModal"><i class="fas fa-plus">&nbsp;Nuevo registro</i></a>
+ 	</section> 
+</body>
+</html>

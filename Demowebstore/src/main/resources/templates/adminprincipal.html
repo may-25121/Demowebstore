@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head xmlns:th="http://www.thymeleaf.org">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+	<title>Sistema de Administración</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.6.1/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/stylesadmin.css}">
+	<link rel="stylesheet" th:href="@{/webjars/fortawesome__fontawesome-free/5.15.3/css/all.css}">
+	
+</head>
+<body>
+	<!-- HEADER -->
+	<div id="content-wrapper" class="d-flex">
+		<header th:insert="layout/adminsidebar :: headeradmin"></header> 
+	
+		<div id="page-container" class="w-100 bg-light-blue">
+			
+			<!-- NAVBAR -->
+			<nav th:insert="layout/adminsidebar :: navbaradmin"></nav>
+			
+			<!-- CONTENIDO PRINCIPAL -->
+			<div id="content" class="container-fluid p-2">
+				<section class="">
+					<div class="mx-4 border-bottom">
+						<div class="row">
+							<div class="col-xl-3 col-lg-6">
+								<h2 class="font-weight-bold mb-0 text-uppercase">Bienvenida may</h2>
+								<p class="lead text-muted">Revisa la ultima información</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<!-- SECCIONES - MENU -->
+			<div class="card-deck m-4" >
+			  <div class="card bg-card-aqua">
+			    <div class="card-body text-center text-capitalize">
+			      <a th:href="@{/listarempleados}" class="h5 text-decoration-none text-white">
+				      <i class="fas fa-user-tie mr-2 lead fa-3x mb-3"></i>
+				      <br>Empleados
+			      </a>
+			    </div>
+			  </div>
+			  <div class="card bg-card-blue">
+			    <div class="card-body text-center text-capitalize">
+			      <a th:href="@{/listaroficinas}" class="h5 text-decoration-none text-white">
+				      <i class="fas fa-building mr-2 lead fa-3x mb-3"></i>
+				      <br>Oficinas
+			      </a>
+			    </div>
+			  </div>
+			  <div class="card bg-card-yellow">
+			    <div class="card-body text-center text-capitalize">
+			      <a class="h5 text-decoration-none text-white">
+				      <i class="fas fa-universal-access mr-2 lead fa-3x mb-3"></i>
+				      <br>Clientes
+			      </a>
+			    </div>
+			  </div>
+			  <div class="card bg-card-red">
+			    <div class="card-body text-center text-capitalize">
+			      <a class="h5 text-decoration-none text-white">
+				      <i class="fas fa-box-open mr-2 lead fa-3x mb-3"></i>
+				      <br>Productos
+			      </a>
+			    </div>
+			  </div>
+			</div>
+			<div class="card-deck m-4" >
+			  <div class="card bg-card-red">
+			    <div class="card-body text-center text-capitalize">
+			      <a class="h5 text-decoration-none text-white">
+				      <i class="fas fa-boxes mr-2 lead fa-3x mb-3"></i>
+				      <br>Linea Productos
+			      </a>
+			    </div>
+			  </div>
+			  
+			  <div class="card bg-card-green">
+			    <div class="card-body text-center text-capitalize">
+			      <a class="h5 text-decoration-none text-white">
+				      <i class="fas fa-hand-holding-usd mr-2 lead fa-3x mb-3"></i>
+				      <br>Pagos
+			      </a>
+			    </div>
+			  </div>
+			  <div class="card bg-card-aqua">
+			    <div class="card-body text-center text-capitalize">
+			      <a class="h5 text-decoration-none text-white">
+				      <i class="fas fa-clipboard-list mr-2 lead fa-3x mb-3"></i>
+				      <br>Ordenes
+			      </a>
+			    </div>
+			  </div>
+			  <div class="card bg-card-blue">
+			    <div class="card-body text-center text-capitalize">
+			      <a class="h5 text-decoration-none text-white">
+				      <i class="fas fa-cog mr-2 lead fa-3x mb-3"></i>
+				      <br>Perfil
+			      </a>
+			    </div>
+			  </div>
+			</div>
+		 </div>
+	</div> 
+	
+	<!-- SCRIPTS -->
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/dist/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.1/js/bootstrap.bundle.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.1/js/bootstrap.min.js}"></script>
+	
+	<!-- MENU TOGGLE SCRIPT -->
+	<script type="text/javascript" src="" th:src="@{/js/dashboard.js}"></script>
+	
+
+</body>
+</html>

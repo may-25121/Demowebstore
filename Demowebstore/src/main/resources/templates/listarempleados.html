@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head xmlns:th="http://www.thymeleaf.org">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+	<title>Planeta Hobby - Sistema de Administración</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.6.1/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/stylesadmin.css}">
+	<link rel="stylesheet" th:href="@{/webjars/fortawesome__fontawesome-free/5.15.3/css/all.css}">
+	
+</head>
+<body>
+
+	<!-- HEADER -->
+	<div id="content-wrapper" class="d-flex">
+		<header th:insert="layout/adminsidebar :: headeradmin"></header> 
+	
+		<div id="page-container" class="w-100 bg-light-blue">
+			
+			<!-- NAVBAR -->
+			<nav th:insert="layout/adminsidebar :: navbaradmin"></nav>
+			
+			<!-- CONTENIDO PRINCIPAL -->
+			<div id="content" class="container-fluidm mx-4 my-3">
+				<section class="bg-white mx-4">
+					<div class="mx-4 border-bottom">
+						<div class="row  my-4">
+							<div class="col-xl-6 col-lg-6 pt-3">
+								<h2 class="font-weight-bold mb-0 text-uppercase"><i class="fas fa-user-tie fa-lg"></i>&nbsp;Lista de Empeados</h2>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="mx-5 row  bg-white justify-content-center">
+			
+				<!-- FORMULARIO DE BUSQUEDA -->
+				<div class="col-md-12 d-flex bd-highlight">
+					<div class="mr-auto p-2 bd-highlight">
+						<form class="form-inline my-4 mx-4">
+						  <div class="form-group mb-2">
+						  	<label for="search" class="col-sm-2 col-form-label">Buscar:</label>
+						  </div>
+						  <div class="form-group mx-sm-3 mb-2">
+						    <input type="text" class="form-control" id="search2">
+						  </div>
+						  <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-search"></i></button>
+						</form>
+					</div>
+					<div class="col-md-3 p-2 bd-highlight my-auto bd-highlight">
+						<a  th:insert="layout/botones :: botonNuevo"></a>
+<!-- 						<div class="d-flex justify-content-end">
+							<a class="btn btn-success" href="" data-toggle="modal" data-target="#formularioEmpleadoModal"><i class="fas fa-plus"></i>&nbsp;Nuevo empleado</a>
+						</div> -->
+					</div>
+				</div>
+				
+				<!-- CONTENIDO DE LA TABLA -->
+				<table class="table text-center mx-4">
+				  <thead class="m-3">
+				    <tr>
+				      <th scope="col">N°</th>
+				      <th scope="col">Apellido</th>
+				      <th scope="col">Nombre</th>
+				      <th scope="col">Email</th>
+				      <th scope="col">Codigo_Oficina</th>
+				      <th scope="col">Ocupación</th>
+				      <th scope="col">Acción</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>Mark</td>
+				      <td>Otto</td>
+				      <td>Mark</td>
+				      <td>Otto</td>
+				      <td>Mark</td>
+				      <td class="d-inline-flex">
+				      	<section th:insert="layout/botones :: botonEditar"></section>
+				      	<section th:insert="layout/botones :: botonEliminar"></section>				      	
+				<!--       	<a class="btn btn-warning"  data-toggle="modal" data-target="#formularioEmpleadoModal"><i class="fas fa-edit"></i></a>
+				      	<a class="btn btn-danger" data-toggle="modal" data-target="#eliminarEmpleadoModal"><i class="far fa-trash-alt"></i></a> -->
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Jacob</td>
+				      <td>Thornton</td>
+				      <td>@fat</td>
+				      <td>Otto</td>
+				      <td>Mark</td>
+				      <td class="d-inline-flex">
+				      	<section th:insert="layout/botones :: botonEditar"></section>
+				      	<section th:insert="layout/botones :: botonEliminar"></section>				      	
+<!-- 				      	<a class="btn btn-warning" data-toggle="modal" data-target="#formularioEmpleadoModal"><i class="fas fa-edit"></i></a>
+				      	<a class="btn btn-danger" data-toggle="modal" data-target="#eliminarEmpleadoModal"><i class="far fa-trash-alt"></i></a> -->
+				      </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Larry</td>
+				      <td>the Bird</td>
+				      <td>@twitter</td>
+				      <td>Otto</td>
+				      <td>Mark</td>
+				      <td class="d-inline-flex">
+				      	<section th:insert="layout/botones :: botonEditar"></section>
+				      	<section th:insert="layout/botones :: botonEliminar"></section>	
+<!-- 				      	<a class="btn btn-warning" data-toggle="modal" data-target="#formularioEmpleadoModal"><i class="fas fa-edit"></i></a>
+				      	<a class="btn btn-danger" data-toggle="modal" data-target="#eliminarEmpleadoModal"><i class="far fa-trash-alt"></i></a> -->
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
+				
+				<nav aria-label="Page navigation example">
+				  <ul class="pagination justify-content-center">
+				    <li class="page-item disabled">
+				      <a class="page-link">Previous</a>
+				    </li>
+				    <li class="page-item"><a class="page-link" href="#">1</a></li>
+				    <li class="page-item"><a class="page-link" href="#">2</a></li>
+				    <li class="page-item"><a class="page-link" href="#">3</a></li>
+				    <li class="page-item">
+				      <a class="page-link" href="#">Next</a>
+				    </li>
+				  </ul>
+				</nav>
+				
+						
+				<!-- MODAL - FORMULARIO DE DATOS PERSONALES DEL EMPLEADO -->
+				<div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="formularioModal" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header mx-4 text-uppercase">
+				        <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-clipboard-list"></i> Registro de Empleado</h5>			        
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				      	<div class="m-4">
+				      	
+				      	<!-- CAMPOS DEL FORMULARIO -->
+							<form>
+							  <div class="form-group">
+							    <label for="apellido">Apellido:</label>
+							    <input type="text" class="form-control" id="apellido" aria-describedby="Ingresar apellido">
+							  </div>
+							  <div class="form-group">
+							    <label for="nombre">Nombre:</label>
+							    <input type="text" class="form-control" id="nombre" aria-describedby="Ingresar nombre">
+							  </div>
+							  <div class="form-group">
+							    <label for="extension">Extension:</label>
+							    <input type="text" class="form-control" id="extension" aria-describedby="Ingresar extension">
+							  </div>
+							  <div class="form-group">
+							    <label for="email">Email:</label>
+							    <input type="text" class="form-control" id="email" aria-describedby="Ingresar email">
+							  </div>
+							  <div class="form-group">
+							    <label for="codigoOficina">Codigo de oficina:</label>
+							    <select id="codigoOficina" class="form-control">
+							      <option selected>1</option>
+							      <option>2</option>
+							    </select>
+							  </div>
+							  <div class="form-group">
+							    <label for="empleado">Reporte a:</label>
+							    <select id="empleado" class="form-control">
+							      <option selected>-</option>
+							      <option>Yapura Marisel</option>
+							    </select>
+							  </div>
+							  <div class="form-group">
+							    <label for="ocupacion">Ocupacion:</label>
+							    <input type="text" class="form-control" id="ocupacion" aria-describedby="Ingresar nombre">
+							  </div>
+							</form>
+						</div>
+				      </div>
+				      <div class="modal-footer d-flex justify-content-center mx-4">
+				        <section th:insert="layout/botones :: botonCancelar"></section>
+				        <section th:insert="layout/botones :: botonGuardar"></section>
+				      </div>
+				    </div>
+				  </div>
+				</div>				
+				
+				<!-- MODAL ELIMINAR EMPLEADO -->
+				
+				<div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header mx-4 text-uppercase">
+				        <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-backspace"></i>&nbsp;Eliminar Registro</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body text-center">
+				      	  <i class="far fa-trash-alt fa-6x my-4"></i>
+					      <div class="mx-4">
+					        <span>¿Estas seguro de eliminar el siguiente registro?</span> 
+					        <p>Empleado <span>Yapura Marisel</span></p> 
+					      </div>
+				      </div>
+				      <div class="modal-footer mx-4 d-flex justify-content-center">
+				      	<section th:insert="layout/botones :: botonNo"></section>
+				        <section th:insert="layout/botones :: botonSi"></section>
+
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+			</div>
+		 </div>
+	</div> 
+	
+	<!-- SCRIPTS -->
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/dist/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.1/js/bootstrap.bundle.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.1/js/bootstrap.min.js}"></script>
+	
+	<!-- MENU TOGGLE SCRIPT -->
+	<script type="text/javascript" src="" th:src="@{/js/dashboard.js}"></script>
+	
+
+</body>
+</html>
